@@ -22,19 +22,6 @@ You will need to install python at least version `3.10` amd `python3.10-venv`.
    ```bash
    cd YOUR_PROJECT_DIRECTORY/ && pytest
    ```
-## Running development server
-To run development server start uvicorn with map to `main.py`.
-
-First remember to activate virtual environment and run alembic migrations:
-```bash
-$ source venv/bin/activate
-$ cd project/
-$ alembic upgrade head
-```
-Then run uvicorn in [project](project/) directory:
-```bash
-uvicorn project.main:app --reload
-```
 # Production environment
 Our production environment is based on docker. If you want to run project service locally you will need to install `docker`.
 
@@ -44,7 +31,7 @@ After installing first build docker image:
 ```
 Then run docker container:
 ```bash
-docker run --rm -it -p 8000:8000 mcn-project-service:latest
+docker run --rm -it -p 8000:8000 YOUR_PROJECT_IMAGE:latest
 ```
 
 # How to Contribute to the Project
